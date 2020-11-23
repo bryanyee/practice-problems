@@ -13,7 +13,7 @@ function List({ comboList }) {
           {comboList.map(({ count, key, toppings }, index) => (
             <tr key={key}>
               <td>{index + 1}</td>
-              <td>{toppings}</td>
+              <td>{toppings.join(', ')}</td>
               <td>{count}</td>
             </tr>
           ))}

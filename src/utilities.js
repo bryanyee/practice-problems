@@ -1,7 +1,9 @@
-import data from './stubs/pizzas.json'
+// import data from './stubs/pizzas.json'
 
 const getData = () => {
- return Promise.resolve(data);
+  return fetch('http://bryanyee.io/cors/pizzas-on.json', { mode: 'cors' })
+    .then((response) => response.json())
+    .then((data) => data);
 }
 
 // Store count of results in a map
